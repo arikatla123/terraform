@@ -5,6 +5,7 @@
                       steps {
                             echo 'Hi, this is Anshul from LevelUp360'
                             echo 'We are Starting the Testing'
+                            sh label: '', script: 'terraform init'
                       }
                 }
                 stage('Build') {
