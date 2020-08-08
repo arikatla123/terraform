@@ -11,7 +11,7 @@
                             
                       }
                 }
-                stage('terraform apply') {
+                stage('terraform plan') {
                       steps {
                             sh label: '', script: 'terraform plan'
                       }
