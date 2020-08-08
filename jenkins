@@ -4,9 +4,9 @@
   terraform 'terraform'
 }
           stages {
-                stage('git chekou') {
+                stage('terraform init') {
                       steps {
-                            echo 'Hi, this is Anshul from LevelUp360'
+                            sh label: '', script: 'terraform init'
                        
                             
                       }
