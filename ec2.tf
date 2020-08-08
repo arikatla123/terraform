@@ -1,5 +1,5 @@
 provider "aws"{
-    region="us-east-1"
+    region="us-west-1c"
 }
 resource "aws_instance" "myfirst-terrafrom" {
   ami           = "ami-021bb9f371690f97a"
