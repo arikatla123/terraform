@@ -13,7 +13,7 @@
                 }
                 stage('terraform apply') {
                       steps {
-                            sh label: '', script: 'terraform apply -no-color -auto-approve'
+                            sh label: '', script: 'terraform apply --auto-approve'
                       }
                 }
                 stage('Deploy') {
