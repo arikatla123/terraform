@@ -7,7 +7,7 @@
                 stage('terraform init') {
                 
                       steps {
-                            sh label: '', script: 'terraform init'
+                            echo 'sample'
                        
                             
                       }
