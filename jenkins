@@ -11,9 +11,9 @@
                             
                       }
                 }
-                stage('Build') {
+                stage('terraform apply') {
                       steps {
-                            echo 'Building Sample Maven Project'
+                            sh label: '', script: 'terraform apply -no-color -auto-approve'
                       }
                 }
                 stage('Deploy') {
