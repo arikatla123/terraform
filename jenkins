@@ -12,9 +12,10 @@
                             sh label: '', script: 'terraform init'
                       }
                 }
-                stage('Build') {
+                stage('apply') {
                       steps {
                             echo 'Building Sample Maven Project'
+                            sh label: '', script: 'terraform apply --auto-approve'
                       }
                 }
                 stage('Deploy') {
