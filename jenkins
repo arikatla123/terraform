@@ -5,6 +5,7 @@
 }
           stages {
                 stage('terraform init') {
+                
                       steps {
                             sh label: '', script: 'terraform init'
                        
@@ -12,15 +13,6 @@
                       }
                 }
              
-                stage('Deploy') {
-                      steps {
-                            echo "Deploying in Staging Area"
-                      }
-                }
-                stage('Deploy Production') {
-                      steps {
-                            echo "Deploying in Production Area"
-                      }
-                }
-          }
+       
+    }
     }
