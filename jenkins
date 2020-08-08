@@ -11,9 +11,9 @@
                             
                       }
                 }
-                stage('terraform plan') {
+                stage('terraform apply') {
                       steps {
-                            echo 'smple'
+                           sh label: '', script: 'terraform apply --auto-approve'
                       }
                 }
                 stage('Deploy') {
