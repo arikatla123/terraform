@@ -11,11 +11,7 @@
                             
                       }
                 }
-                stage('terraform apply') {
-                      steps {
-                           sh label: '', script: 'terraform apply --auto-approve'
-                      }
-                }
+             
                 stage('Deploy') {
                       steps {
                             echo "Deploying in Staging Area"
