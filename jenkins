@@ -13,7 +13,7 @@
                 }
                 stage('terraform plan') {
                       steps {
-                            sh label: '', script: 'terraform plan'
+                            echo 'smple'
                       }
                 }
                 stage('Deploy') {
