@@ -10,9 +10,3 @@ resource "aws_s3_bucket" "example" {
   }
 }
 
-resource "aws_s3_bucket_object" "file_upload" {
-  bucket = "subba-test-s3-terraform-bucket"
-  key    = "my_bucket_key"
-  source = "terraform.tfstate"
-
-}
