@@ -5,28 +5,27 @@
                 }
 
           stages {
-                stage('Init') {
+                stage('Terraform Init') {
                       steps {
                             echo 'Hi, this is Anshul from LevelUp360'
                             echo 'We are Starting the Testing'
                             sh label: '', script: 'terraform init'
                       }
                 }
-                stage('apply') {
+                
+                stage('Terraform Plan') {
+                      steps {
+                            echo 'Building Sample Maven Project'
+                            sh label: '', script: 'terraform plan'
+                      }
+                }
+                stage('Terraform Apply') {
                       steps {
                             echo 'Building Sample Maven Project'
                             sh label: '', script: 'terraform apply --auto-approve'
                       }
                 }
-                stage('Deploy') {
-                      steps {
-                            echo "Deploying in Staging Area"
-                      }
-                }
-                stage('Deploy Production') {
-                      steps {
-                            echo "Deploying in Production Area"
-                      }
-                }
+               
+               
           }
     }
